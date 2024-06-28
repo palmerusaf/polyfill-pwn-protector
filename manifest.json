@@ -11,5 +11,13 @@
         "path": "./rules.json"
       }
     ]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./injectSafePoly.js"],
+      "run_at": "document_end",
+      "world": "ISOLATED"
+    }
+  ]
 }
